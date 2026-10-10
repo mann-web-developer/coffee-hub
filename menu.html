@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full Menu & Prices | COFFEE HUB</title>
+  <meta name="description" content="Explore Coffee Hub's official menu: Kulhar Pizza @ ₹99, Handcrafted Burgers from ₹49, Cold Coffees from ₹69, Shakes, Wraps, Sandwiches and Combos from ₹129. Order: 9478015089. Developed by Vikash.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#120904] text-[#FFF8F0] antialiased selection:bg-amber-500 selection:text-black relative">
+
+  <!-- POLICY NOTICE TOP BAR -->
+  <div class="policy-banner py-2 px-4 text-center text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 shadow-md">
+    <i class="fa-solid fa-store"></i>
+    <span>ONLY DINE-IN • TAKEAWAY • NO DELIVERY FACILITY</span>
+    <span class="hidden sm:inline">|</span>
+    <span>📞 ORDER / CALL: 9478015089</span>
+    <span class="hidden sm:inline">|</span>
+    <span>FRESHLY BAKED • 100% VEG</span>
+  </div>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-glow w-96 h-96 bg-amber-600 top-20 right-[-80px]"></div>
+  <div class="ambient-glow w-96 h-96 bg-orange-700 top-[800px] left-[-100px]"></div>
+
+  <!-- STICKY NAVIGATION BAR -->
+  <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-black font-heading font-extrabold text-2xl shadow-lg shadow-amber-500/30 group-hover:rotate-6 transition-transform">
+          ☕
+        </div>
+        <div>
+          <span class="text-xl font-heading font-black tracking-tight text-white group-hover:text-amber-400 transition-colors">
+            COFFEE HUB
+          </span>
+          <span class="text-[11px] block font-semibold text-amber-400 tracking-wider">GOOD COFFEE • GOOD MOOD</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Clean, Spacious & Non-Wrapping) -->
+      <nav class="hidden md:flex items-center gap-2 lg:gap-6">
+        <a href="index.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Home</a>
+        <a href="menu.html" class="whitespace-nowrap px-3.5 py-2 rounded-xl text-sm font-black text-amber-400 bg-amber-500/10 border border-amber-500/30">Full Menu</a>
+        <a href="combos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Combos</a>
+        <a href="videos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Videos</a>
+        <a href="about.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Our Story</a>
+        <a href="contact.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      </nav>
+
+      <!-- Right CTA (Single Clean Action Button) -->
+      <div class="hidden sm:flex items-center">
+        <a href="#takeaway-tray-bar" class="btn-gold px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 whitespace-nowrap shadow-lg">
+          <span>Takeaway Tray</span>
+          <i class="fa-solid fa-basket-shopping text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a href="tel:9478015089" class="p-2 text-amber-400" aria-label="Call Coffee Hub">
+          <i class="fa-solid fa-phone text-lg"></i>
+        </a>
+        <button id="mobile-menu-btn" class="p-2 text-stone-200 hover:text-white" aria-label="Open Menu">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-[#120904]/98 backdrop-blur-2xl hidden flex-col justify-between p-6 md:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-800">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-black font-bold">☕</div>
+          <span class="font-heading font-black text-white text-lg">COFFEE HUB</span>
+        </div>
+        <button id="mobile-menu-close" class="text-stone-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-3 mt-8">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Home</a>
+        <a href="menu.html" class="px-4 py-3 rounded-xl bg-amber-500/10 text-amber-400 font-bold border border-amber-500/30">Full Menu</a>
+        <a href="combos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Combos</a>
+        <a href="videos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Videos</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Our Story</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Contact</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-stone-800">
+      <a href="tel:9478015089" class="btn-gold w-full py-3 rounded-xl text-center font-bold text-sm block">
+        <i class="fa-solid fa-phone mr-2"></i> Call: 9478015089
+      </a>
+    </div>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <section class="pt-12 pb-8 relative text-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-amber-400 font-extrabold text-xs uppercase tracking-widest block mb-2">
+        MADE FRESH DAILY • 100% PURE VEG
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-black text-white">
+        Official <span class="text-gold-gradient">Menu & Prices</span>
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base mt-3 max-w-xl mx-auto">
+        Tap the <strong>"+ Add to Tray"</strong> button on any item to build your takeaway order and send it directly on WhatsApp (9478015089)!
+      </p>
+
+      <!-- Live Search Box -->
+      <div class="mt-8 max-w-md mx-auto relative">
+        <input type="text" id="menu-search" placeholder="Search pizza, burger, cold coffee, fries..." class="w-full px-5 py-3.5 pl-12 rounded-2xl bg-stone-900/90 border border-amber-500/30 text-white placeholder-stone-500 focus:outline-none focus:border-amber-400 text-sm shadow-xl transition-all">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-amber-400"></i>
+      </div>
+
+      <!-- Official Printed Menu Board Preview -->
+      <div class="mt-8 max-w-2xl mx-auto rounded-3xl overflow-hidden border border-amber-500/40 shadow-2xl group relative" data-aos="zoom-in">
+        <img src="assets/images/official-menu-card.jpg" alt="Official Coffee Hub Menu Board" class="w-full h-auto object-cover">
+        <div class="absolute bottom-4 right-4 bg-black/85 backdrop-blur-md px-3.5 py-1.5 rounded-xl text-xs font-bold text-amber-400 border border-amber-500/30 shadow-lg">
+          📜 Official Menu Card
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU CATEGORY FILTER BUTTONS -->
+  <section class="py-6 sticky top-20 z-30 bg-[#120904]/90 backdrop-blur-md border-y border-stone-800">
+    <div class="max-w-7xl mx-auto px-4 overflow-x-auto scrollbar-none flex items-center justify-start sm:justify-center gap-2">
+      <button class="menu-filter-btn px-4 py-2 rounded-xl text-xs font-black bg-amber-500 text-black whitespace-nowrap" data-category="all">
+        🌟 All Items
+      </button>
+      <button class="menu-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-stone-900/80 text-stone-300 hover:text-white whitespace-nowrap" data-category="pizza">
+        🍕 Kulhar & Pizzas
+      </button>
+      <button class="menu-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-stone-900/80 text-stone-300 hover:text-white whitespace-nowrap" data-category="burger">
+        🍔 Burgers (₹49+)
+      </button>
+      <button class="menu-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-stone-900/80 text-stone-300 hover:text-white whitespace-nowrap" data-category="coffee">
+        ☕ Cold Coffee & Shakes (₹69+)
+      </button>
+      <button class="menu-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-stone-900/80 text-stone-300 hover:text-white whitespace-nowrap" data-category="combos">
+        🍱 Combos (₹129+)
+      </button>
+      <button class="menu-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-stone-900/80 text-stone-300 hover:text-white whitespace-nowrap" data-category="wraps">
+        🌯 Wraps & Sandwiches
+      </button>
+      <button class="menu-filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-stone-900/80 text-stone-300 hover:text-white whitespace-nowrap" data-category="fries">
+        🍟 Fries & Salads
+      </button>
+    </div>
+  </section>
+
+  <!-- MENU GRID SECTION -->
+  <section class="py-12 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- ================= PIZZAS ================= -->
+        <!-- 1. Kulhar Pizza -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border-2 border-orange-500 relative flex flex-col justify-between" data-category="pizza">
+          <div class="absolute -top-3 right-4 px-2.5 py-0.5 rounded-full text-[10px] font-black bg-orange-600 text-white">
+            ★ VIRAL SPECIAL
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs font-bold text-orange-400">SIGNATURE DISH</span>
+            </div>
+            <h3 class="item-name text-xl font-heading font-black text-white">Kulhar Pizza</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1 leading-relaxed">
+              Baked in traditional earthen clay kulhad with cheese burst, corn, capsicum, and insane gooey pull!
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-orange-400">₹99/-</span>
+            <button class="add-to-tray-btn btn-kulhad px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Kulhar Pizza" data-price="99">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Margherita Pizza -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="pizza">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Classic</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Margherita Pizza</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">100% Mozzarella cheese with herb-infused rich Italian pizza sauce.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹120/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Margherita Pizza" data-price="120">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Veggie Love Pizza -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="pizza">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Classic</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Veggie Love Pizza</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Topped with fresh diced onions, capsicum, tomatoes & mozzarella.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹99/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Veggie Love Pizza" data-price="99">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Spring Fresh Pizza -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="pizza">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Classic</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Spring Fresh Pizza</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Loaded with crunchy onion, green capsicum, and sweet golden corn.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹99/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Spring Fresh Pizza" data-price="99">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Peppy Paneer Pizza -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="pizza">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs font-bold text-amber-400">Superb Zone</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Peppy Paneer Pizza</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Marinated paneer cubes, crisp onion, capsicum & spicy red paprika.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹159/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Peppy Paneer Pizza" data-price="159">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Pizza Italia -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="pizza">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs font-bold text-amber-400">Swag Zone</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Pizza Italia</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Black olives, sweetcorn, spicy jalapenos, onions & red paprika.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹179/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Pizza Italia" data-price="179">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 7. Royal Punjabi Pizza -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="pizza">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs font-bold text-amber-400">Royal Zone</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Royal Punjabi Pizza</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Spicy tandoori paneer, red paprika, onion, capsicum, olives & corn.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹199/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Royal Punjabi Pizza" data-price="199">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. Farmhouse Pizza -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="pizza">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs font-bold text-amber-400">Royal Zone</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Farmhouse Pizza</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Paneer, black olives, tomato, capsicum, corn, red paprika & onion.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹199/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Farmhouse Pizza" data-price="199">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= BURGERS ================= -->
+        <!-- 9. Aloo Tikki Burger -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="burger">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-amber-400 font-bold">BESTSELLER</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Aloo Tikki Burger</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Crispy spiced potato patty with lettuce, onion & secret tangy sauce.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹49/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Aloo Tikki Burger" data-price="49">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 10. Double Tikki Burger -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="burger">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Double Layer</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Double Tikki Burger</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Two crispy spiced tikkis stacked with extra crunchy lettuce & sauce.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹59/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Double Tikki Burger" data-price="59">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 11. Paneer Burger -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="burger">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-amber-400 font-bold">TOP PICK</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Paneer Burger</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Thick soft paneer patty grilled with melted cheese slice & creamy mayo.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹79/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Paneer Burger" data-price="79">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 12. Cheese Corn Burger -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="burger">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Cheesy Delight</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Cheese Corn Burger</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Sweet corn patty smothered in gooey cheese spread and toasted bun.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹79/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Cheese Corn Burger" data-price="79">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= COFFEE & SHAKES ================= -->
+        <!-- 13. Cold Coffee -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-amber-500/40 flex flex-col justify-between" data-category="coffee">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-amber-400 font-bold">SMOOTH • CREAMY</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Classic Cold Coffee</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Thickly blended milk, rich roast coffee, and chocolate syrup drizzle.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹69/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Classic Cold Coffee" data-price="69">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 14. Hazelnut Cold Coffee -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-amber-500/40 flex flex-col justify-between" data-category="coffee">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-amber-400 font-bold">NUTTY & DECADENT</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Hazelnut Cold Coffee</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Infused with aromatic roasted hazelnut flavor and whipped cream topping.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹89/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Hazelnut Cold Coffee" data-price="89">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 15. Frappuccino -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="coffee">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Iced Blend</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Frappuccino</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Ice-blended coffee beverage topped with whipped cream.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹89/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Frappuccino" data-price="89">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 16. Iced Mocha -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="coffee">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Rich Cocoa</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Iced Mocha</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Espresso shot combined with velvety dark chocolate & chilled milk.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹89/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Iced Mocha" data-price="89">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 17. Caramel Coffee -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="coffee">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Sweet & Buttery</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Caramel Coffee</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Cold brew with creamy caramel sauce swirls and sea-salt froth.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹89/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Caramel Coffee" data-price="89">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 18. Thick Shakes -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="coffee">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-amber-400 font-bold">THICK SHAKE</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Oreo / Chocolate Shake</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Rich ice cream shake loaded with crushed Oreos or chocolate chips.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹69/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Oreo / Chocolate Shake" data-price="69">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= COMBOS ================= -->
+        <!-- 19. Combo 1 -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="combos">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-500 text-black">COMBO 1</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Paneer Burger + Cold Coffee</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Soft paneer burger with chilled cold coffee or choice of shake.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹129/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Combo 1 (Paneer Burger + Cold Coffee)" data-price="129">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 20. Combo 2 -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="combos">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-orange-500 text-white">COMBO 2</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Special Wrap + Cold Coffee</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Loaded spicy special veggie wrap + chilled coffee or thick shake.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹169/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Combo 2 (Special Wrap + Cold Coffee)" data-price="169">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 21. Combo 3 -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="combos">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-yellow-500 text-black">COMBO 3</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Veg Sandwich + Cold Coffee</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Grilled crunchy veg sandwich + chilled cold coffee or thick shake.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹149/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Combo 3 (Veg Sandwich + Cold Coffee)" data-price="149">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 22. Combo 4 -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border-2 border-amber-500 flex flex-col justify-between" data-category="combos">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-red-600 text-white">COMBO 4</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Super Pizza + Cold Coffee</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Cheesy vegetable pizza + chilled chocolate coffee shake.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹199/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Combo 4 (Super Pizza + Cold Coffee)" data-price="199">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= WRAPS & SANDWICHES ================= -->
+        <!-- 23. Special Wrap -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="wraps">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Wrap Special</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Special Wrap</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Loaded with spiced paneer, crispy veggies, and creamy chipotle.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹120/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Special Wrap" data-price="120">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 24. Pizza Sandwich -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="wraps">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Grilled Sandwich</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Pizza Sandwich</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Stuffed with pizza toppings, oregano, chili flakes, and melty mozzarella.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹130/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Pizza Sandwich" data-price="130">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= FRIES & SIDES ================= -->
+        <!-- 25. Peri Peri Fries -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="fries">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-stone-400">Crispy Sides</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Peri Peri Fries</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Golden crispy French fries tossed in authentic hot African peri-peri spices.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹89/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Peri Peri Fries" data-price="89">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- 26. Tandoori Cheese Fries -->
+        <div class="menu-item-card glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-category="fries">
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <span class="veg-badge"></span>
+              <span class="text-xs text-amber-400 font-bold">LOADED</span>
+            </div>
+            <h3 class="item-name text-lg font-heading font-black text-white">Tandoori Cheese Fries</h3>
+            <p class="item-desc text-xs text-stone-400 mt-1">Crispy fries generously drenched in smoky tandoori sauce & melted cheese.</p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-800 flex items-center justify-between">
+            <span class="text-2xl font-heading font-black text-amber-400">₹120/-</span>
+            <button class="add-to-tray-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold flex items-center gap-1.5" data-name="Tandoori Cheese Fries" data-price="120">
+              <i class="fa-solid fa-plus"></i> Add to Tray
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TAKEAWAY TRAY FLOATING BAR -->
+  <div id="takeaway-tray-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-[#1E0F07] border-t-2 border-amber-500 py-3 px-4 shadow-2xl transition-transform duration-300 translate-y-full flex items-center justify-between max-w-4xl mx-auto rounded-t-2xl">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-amber-500 text-black flex items-center justify-center font-black">
+        <span id="tray-count">0</span>
+      </div>
+      <div>
+        <span class="text-xs text-stone-300 block">Takeaway Pre-Order Tray</span>
+        <span id="tray-total" class="text-lg font-heading font-black text-amber-400">₹0</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="tray-clear-btn" class="px-3 py-2 text-xs text-stone-400 hover:text-white">Clear</button>
+      <button id="tray-whatsapp-btn" class="btn-gold px-5 py-2.5 rounded-xl text-xs font-black flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp text-sm"></i>
+        <span>WhatsApp Order (9478015089)</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER WITH VIKASH ATTRIBUTION -->
+  <footer class="border-t border-stone-800 bg-[#0A0502] py-12 text-sm text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center">
+      <div>
+        <p>&copy; <span class="current-year">2026</span> COFFEE HUB. Good Food • Good Mood • Good Vibes.</p>
+        <p class="text-xs text-amber-400 mt-1">Call / WhatsApp: 9478015089</p>
+      </div>
+      <div class="flex items-center justify-center gap-2 text-amber-300 font-bold bg-stone-900/80 px-4 py-2 rounded-xl border border-amber-500/30 mt-4 sm:mt-0 shadow-md">
+        <span>✨ Designed & Developed with ❤️ by</span>
+        <span class="text-white bg-amber-500 text-black px-2 py-0.5 rounded-lg font-black">Vikash</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/919478015089?text=Hi%20Coffee%20Hub,%20I%20want%20to%20order%20from%20the%20menu" target="_blank" class="whatsapp-fab w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center text-2xl" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <button id="back-to-top" class="back-to-top w-12 h-12 rounded-xl glass-panel text-amber-400 flex items-center justify-center text-lg border border-amber-500/30">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

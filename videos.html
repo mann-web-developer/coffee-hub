@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos & Reels Gallery | COFFEE HUB</title>
+  <meta name="description" content="Watch official Coffee Hub videos: The famous ₹99 Kulhad Pizza cheese pull, cold coffee brewing, burger sizzle, and cafe van ambience. Contact: 9478015089.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#120904] text-[#FFF8F0] antialiased selection:bg-amber-500 selection:text-black relative">
+
+  <!-- POLICY NOTICE TOP BAR -->
+  <div class="policy-banner py-2 px-4 text-center text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 shadow-md">
+    <i class="fa-solid fa-store"></i>
+    <span>ONLY DINE-IN • TAKEAWAY • NO DELIVERY FACILITY</span>
+    <span class="hidden sm:inline">|</span>
+    <span>📞 CALL / WHATSAPP: 9478015089</span>
+  </div>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-glow w-96 h-96 bg-amber-600 top-20 left-[-80px]"></div>
+  <div class="ambient-glow w-96 h-96 bg-orange-700 top-[700px] right-[-100px]"></div>
+
+  <!-- STICKY NAVIGATION BAR -->
+  <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-black font-heading font-extrabold text-2xl shadow-lg shadow-amber-500/30 group-hover:rotate-6 transition-transform">
+          ☕
+        </div>
+        <div>
+          <span class="text-xl font-heading font-black tracking-tight text-white group-hover:text-amber-400 transition-colors">
+            COFFEE HUB
+          </span>
+          <span class="text-[11px] block font-semibold text-amber-400 tracking-wider">GOOD COFFEE • GOOD MOOD</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Clean, Spacious & Non-Wrapping) -->
+      <nav class="hidden md:flex items-center gap-2 lg:gap-6">
+        <a href="index.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Home</a>
+        <a href="menu.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Full Menu</a>
+        <a href="combos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Combos</a>
+        <a href="videos.html" class="whitespace-nowrap px-3.5 py-2 rounded-xl text-sm font-black text-amber-400 bg-amber-500/10 border border-amber-500/30">Videos</a>
+        <a href="about.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Our Story</a>
+        <a href="contact.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      </nav>
+
+      <!-- Right CTA (Single Clean Action Button) -->
+      <div class="hidden sm:flex items-center">
+        <a href="menu.html" class="btn-gold px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 whitespace-nowrap shadow-lg">
+          <span>Explore Menu</span>
+          <i class="fa-solid fa-utensils text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a href="tel:9478015089" class="p-2 text-amber-400" aria-label="Call Coffee Hub">
+          <i class="fa-solid fa-phone text-lg"></i>
+        </a>
+        <button id="mobile-menu-btn" class="p-2 text-stone-200 hover:text-white" aria-label="Open Navigation">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-[#120904]/98 backdrop-blur-2xl hidden flex-col justify-between p-6 md:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-800">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-black font-bold">☕</div>
+          <span class="font-heading font-black text-white text-lg">COFFEE HUB</span>
+        </div>
+        <button id="mobile-menu-close" class="text-stone-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-3 mt-8">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Home</a>
+        <a href="menu.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Full Menu</a>
+        <a href="combos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Combos</a>
+        <a href="videos.html" class="px-4 py-3 rounded-xl bg-amber-500/10 text-amber-400 font-bold border border-amber-500/30">Videos</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Our Story</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Contact</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-stone-800">
+      <a href="tel:9478015089" class="btn-gold w-full py-3 rounded-xl text-center font-bold text-sm block">
+        <i class="fa-solid fa-phone mr-2"></i> Call: 9478015089
+      </a>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="pt-14 pb-8 relative text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <span class="text-amber-400 font-extrabold text-xs uppercase tracking-widest block mb-2">
+        OFFICIAL CAFE REELS & VIDEOS
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-black text-white">
+        Coffee Hub <span class="text-gold-gradient">Video Experience</span>
+      </h1>
+      <p class="text-stone-300 text-base mt-4 max-w-xl mx-auto">
+        Watch our official videos recorded at Coffee Hub! Play directly on the video players below. Call: <strong>9478015089</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- LIVE VIDEOS (Connected directly to assets/video/video-1.mp4 and video-2.mp4) -->
+  <section class="py-12 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Video 1 -->
+        <div class="glass-panel rounded-3xl p-6 border-2 border-amber-500/30 food-card" data-aos="fade-up">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-full text-xs font-black bg-orange-600 text-white">
+              OFFICIAL VIDEO #1
+            </span>
+            <span class="text-xs text-amber-400 font-bold"><i class="fa-solid fa-play mr-1"></i> Live Player</span>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden aspect-video bg-black border border-stone-800 shadow-2xl relative mb-4 flex items-center justify-center">
+            <video src="assets/video/video-1.mp4" controls playsinline preload="metadata" class="w-full h-full object-contain bg-black">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <h3 class="text-xl font-heading font-black text-white">Coffee Hub Special Video 1</h3>
+          <p class="text-xs text-stone-400 mt-1">Directly loaded from your uploaded video file <code>video-1.mp4</code>.</p>
+          
+          <div class="mt-4 pt-3 border-t border-stone-800 flex items-center justify-between">
+            <a href="tel:9478015089" class="text-xs font-bold text-amber-400 hover:underline">
+              <i class="fa-solid fa-phone mr-1"></i> Order: 9478015089
+            </a>
+            <button class="open-video-btn btn-gold px-4 py-2 rounded-xl text-xs font-black" data-video-title="Coffee Hub Video 1" data-video-src="assets/video/video-1.mp4">
+              Popup Fullscreen
+            </button>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="glass-panel rounded-3xl p-6 border-2 border-amber-500/30 food-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-500 text-black">
+              OFFICIAL VIDEO #2
+            </span>
+            <span class="text-xs text-amber-400 font-bold"><i class="fa-solid fa-play mr-1"></i> Live Player</span>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden aspect-video bg-black border border-stone-800 shadow-2xl relative mb-4 flex items-center justify-center">
+            <video src="assets/video/video-2.mp4" controls playsinline preload="metadata" class="w-full h-full object-contain bg-black">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <h3 class="text-xl font-heading font-black text-white">Coffee Hub Special Video 2</h3>
+          <p class="text-xs text-stone-400 mt-1">Directly loaded from your uploaded video file <code>video-2.mp4</code>.</p>
+          
+          <div class="mt-4 pt-3 border-t border-stone-800 flex items-center justify-between">
+            <a href="tel:9478015089" class="text-xs font-bold text-amber-400 hover:underline">
+              <i class="fa-solid fa-phone mr-1"></i> Order: 9478015089
+            </a>
+            <button class="open-video-btn btn-gold px-4 py-2 rounded-xl text-xs font-black" data-video-title="Coffee Hub Video 2" data-video-src="assets/video/video-2.mp4">
+              Popup Fullscreen
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO MODAL POPUP -->
+  <div id="video-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-panel rounded-3xl p-6 max-w-3xl w-full border border-amber-500/40 relative space-y-4">
+      <div class="flex items-center justify-between pb-2 border-b border-stone-800">
+        <h3 id="video-modal-title" class="text-lg font-heading font-black text-white">Coffee Hub Reel</h3>
+        <button id="close-video-modal" class="text-stone-400 hover:text-white p-1 text-xl">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="aspect-video w-full rounded-2xl overflow-hidden bg-black border border-stone-800 flex items-center justify-center">
+        <video id="video-modal-player" controls playsinline class="w-full h-full object-contain bg-black">
+          <source src="assets/video/video-1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="text-xs text-stone-400 text-center">
+        ☕ Official Coffee Hub Video Player • Call: 9478015089
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTER WITH VIKASH ATTRIBUTION -->
+  <footer class="border-t border-stone-800 bg-[#0A0502] pt-12 pb-10 text-sm text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
+        <div>
+          <span class="font-heading font-bold text-white text-base">COFFEE HUB</span>
+          <p class="text-stone-500">Call for Takeaway: 9478015089</p>
+        </div>
+        <div class="flex items-center gap-2 text-amber-300 font-bold bg-stone-900/80 px-4 py-2 rounded-xl border border-amber-500/30">
+          <span>✨ Designed & Developed with ❤️ by</span>
+          <span class="text-white bg-amber-500 text-black px-2 py-0.5 rounded-lg font-black">Vikash</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/919478015089?text=Hi%20Coffee%20Hub,%20I%20saw%20your%20videos" target="_blank" class="whatsapp-fab w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center text-2xl" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <button id="back-to-top" class="back-to-top w-12 h-12 rounded-xl glass-panel text-amber-400 flex items-center justify-center text-lg border border-amber-500/30">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

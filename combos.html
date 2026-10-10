@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combos & Specials (From ₹129) | COFFEE HUB</title>
+  <meta name="description" content="Irresistible Combos starting @ ₹129: Paneer Burger + Cold Coffee, Special Wrap Combo, and ₹99 Kulhar Pizza. Call: 9478015089. Created by Vikash.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#120904] text-[#FFF8F0] antialiased selection:bg-amber-500 selection:text-black relative">
+
+  <!-- POLICY NOTICE TOP BAR -->
+  <div class="policy-banner py-2 px-4 text-center text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 shadow-md">
+    <i class="fa-solid fa-store"></i>
+    <span>ONLY DINE-IN • TAKEAWAY • NO DELIVERY FACILITY</span>
+    <span class="hidden sm:inline">|</span>
+    <span>📞 ORDER / CALL: 9478015089</span>
+    <span class="hidden sm:inline">|</span>
+    <span>COMBOS STARTING @ ₹129/-</span>
+  </div>
+
+  <!-- STICKY NAVIGATION BAR -->
+  <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-black font-heading font-extrabold text-2xl shadow-lg shadow-amber-500/30 group-hover:rotate-6 transition-transform">
+          ☕
+        </div>
+        <div>
+          <span class="text-xl font-heading font-black tracking-tight text-white group-hover:text-amber-400 transition-colors">
+            COFFEE HUB
+          </span>
+          <span class="text-[11px] block font-semibold text-amber-400 tracking-wider">GOOD COFFEE • GOOD MOOD</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Clean, Spacious & Non-Wrapping) -->
+      <nav class="hidden md:flex items-center gap-2 lg:gap-6">
+        <a href="index.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Home</a>
+        <a href="menu.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Full Menu</a>
+        <a href="combos.html" class="whitespace-nowrap px-3.5 py-2 rounded-xl text-sm font-black text-amber-400 bg-amber-500/10 border border-amber-500/30">Combos</a>
+        <a href="videos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Videos</a>
+        <a href="about.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Our Story</a>
+        <a href="contact.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      </nav>
+
+      <!-- Right CTA (Single Clean Action Button) -->
+      <div class="hidden sm:flex items-center">
+        <a href="menu.html" class="btn-gold px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 whitespace-nowrap shadow-lg">
+          <span>Order Takeaway</span>
+          <i class="fa-solid fa-bag-shopping text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a href="tel:9478015089" class="p-2 text-amber-400" aria-label="Call Coffee Hub">
+          <i class="fa-solid fa-phone text-lg"></i>
+        </a>
+        <button id="mobile-menu-btn" class="p-2 text-stone-200 hover:text-white" aria-label="Open Menu">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-[#120904]/98 backdrop-blur-2xl hidden flex-col justify-between p-6 md:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-800">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-black font-bold">☕</div>
+          <span class="font-heading font-black text-white text-lg">COFFEE HUB</span>
+        </div>
+        <button id="mobile-menu-close" class="text-stone-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-3 mt-8">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Home</a>
+        <a href="menu.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Full Menu</a>
+        <a href="combos.html" class="px-4 py-3 rounded-xl bg-amber-500/10 text-amber-400 font-bold border border-amber-500/30">Combos</a>
+        <a href="videos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Videos</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Our Story</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Contact</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-stone-800">
+      <a href="tel:9478015089" class="btn-gold w-full py-3 rounded-xl text-center font-bold text-sm block">
+        <i class="fa-solid fa-phone mr-2"></i> Call: 9478015089
+      </a>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="pt-14 pb-12 relative text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <span class="text-amber-400 font-extrabold text-xs uppercase tracking-widest block mb-2">
+        FRESHEN UP YOUR BREAK • MADE FRESH DAILY
+      </span>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-black text-white">
+        Super Value <span class="text-gold-gradient">Combos & Specials</span>
+      </h1>
+      <p class="text-stone-300 text-base mt-4 max-w-xl mx-auto">
+        Hungry with friends? Grab our loaded combo platters starting at just <strong>₹129/-</strong> with chilled cold coffee! Call: <strong class="text-amber-400">9478015089</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- 4 OFFICIAL COMBOS SHOWCASE -->
+  <section class="py-12 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Official Combos Banner -->
+      <div class="mb-12 rounded-3xl overflow-hidden border-2 border-amber-500/40 shadow-2xl group" data-aos="zoom-in">
+        <img src="assets/images/combos-special.jpg" alt="Coffee Hub Official Combos Menu Poster" class="w-full h-auto object-cover">
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Combo 1 -->
+        <div class="glass-panel rounded-3xl p-8 food-card border border-stone-800 flex flex-col justify-between relative overflow-hidden" data-aos="fade-up">
+          <div class="flex justify-between items-start mb-4">
+            <span class="px-4 py-1.5 rounded-full text-xs font-black bg-amber-500 text-black">
+              COMBO 1 • BESTSELLER
+            </span>
+            <span class="veg-badge"></span>
+          </div>
+
+          <div class="space-y-2 mb-6">
+            <h3 class="text-2xl font-heading font-black text-white">Paneer Burger + Cold Coffee</h3>
+            <p class="text-sm text-stone-300 leading-relaxed">
+              Crispy toasted burger with a thick grilled paneer patty, melted cheese, crisp onions, tomato slices, paired with our signature creamy chilled cold coffee with chocolate drizzle.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 text-xs text-amber-300">
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Classic Paneer Patty</span>
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Ice Cold Coffee</span>
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Perfect Evening Snack</span>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-stone-400 block">Total Combo Price</span>
+              <span class="text-4xl font-heading font-black text-amber-400">₹129/-</span>
+            </div>
+            <button class="add-to-tray-btn btn-gold px-6 py-3 rounded-xl font-black text-xs flex items-center gap-2" data-name="Combo 1 (Paneer Burger + Cold Coffee)" data-price="129">
+              <i class="fa-solid fa-plus"></i> Add to Takeaway Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="glass-panel rounded-3xl p-8 food-card border border-stone-800 flex flex-col justify-between relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex justify-between items-start mb-4">
+            <span class="px-4 py-1.5 rounded-full text-xs font-black bg-orange-500 text-white">
+              COMBO 2 • SPICY & FRESH
+            </span>
+            <span class="veg-badge"></span>
+          </div>
+
+          <div class="space-y-2 mb-6">
+            <h3 class="text-2xl font-heading font-black text-white">Special Wrap + Cold Coffee</h3>
+            <p class="text-sm text-stone-300 leading-relaxed">
+              Soft grilled tortilla loaded with paneer chunks, crunchy bell peppers, shredded lettuce, mint mayo, spicy red paprika, accompanied by a chilled rich chocolate cold coffee.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 text-xs text-orange-300">
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Loaded Veggie Wrap</span>
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Mint & Chipotle Mayo</span>
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Spicy & Crunchy</span>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-stone-400 block">Total Combo Price</span>
+              <span class="text-4xl font-heading font-black text-amber-400">₹169/-</span>
+            </div>
+            <button class="add-to-tray-btn btn-gold px-6 py-3 rounded-xl font-black text-xs flex items-center gap-2" data-name="Combo 2 (Special Wrap + Cold Coffee)" data-price="169">
+              <i class="fa-solid fa-plus"></i> Add to Takeaway Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="glass-panel rounded-3xl p-8 food-card border border-stone-800 flex flex-col justify-between relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex justify-between items-start mb-4">
+            <span class="px-4 py-1.5 rounded-full text-xs font-black bg-yellow-500 text-black">
+              COMBO 3 • LIGHT & TASTY
+            </span>
+            <span class="veg-badge"></span>
+          </div>
+
+          <div class="space-y-2 mb-6">
+            <h3 class="text-2xl font-heading font-black text-white">Veg Sandwich + Cold Coffee</h3>
+            <p class="text-sm text-stone-300 leading-relaxed">
+              Golden grilled sandwich filled with seasoned vegetables, fresh cheese, and tangy sandwich spread, served hot alongside an ice-cold chocolate cold coffee.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 text-xs text-yellow-300">
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Golden Grilled Bread</span>
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Fresh Crunchy Veggies</span>
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Smooth Coffee Chill</span>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-stone-400 block">Total Combo Price</span>
+              <span class="text-4xl font-heading font-black text-amber-400">₹149/-</span>
+            </div>
+            <button class="add-to-tray-btn btn-gold px-6 py-3 rounded-xl font-black text-xs flex items-center gap-2" data-name="Combo 3 (Veg Sandwich + Cold Coffee)" data-price="149">
+              <i class="fa-solid fa-plus"></i> Add to Takeaway Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- Combo 4 -->
+        <div class="glass-panel rounded-3xl p-8 food-card border-2 border-amber-500 flex flex-col justify-between relative overflow-hidden shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+          <div class="absolute -top-3 right-4 px-2 py-0.5 rounded-full text-[10px] font-black bg-orange-600 text-white">
+            CHEF'S SPECIAL
+          </div>
+          <div>
+            <div class="flex justify-between items-start mb-4">
+              <span class="px-4 py-1.5 rounded-full text-xs font-black bg-red-600 text-white">
+                COMBO 4 • FEAST SPECIAL
+              </span>
+              <span class="veg-badge"></span>
+            </div>
+
+            <h3 class="text-2xl font-heading font-black text-white">Super Pizza + Cold Coffee</h3>
+            <p class="text-sm text-stone-300 leading-relaxed">
+              Our loaded vegetable pizza with bubbly melted mozzarella, crispy crust, capsicum, onion, sweetcorn, accompanied by a decadent thick cold coffee shake.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2 text-xs text-amber-300">
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Cheesy Veg Pizza</span>
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Loaded Mozzarella</span>
+              <span class="px-2.5 py-1 rounded-lg bg-black/50 border border-stone-800">Total Feast</span>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-stone-800 flex items-center justify-between">
+            <div>
+              <span class="text-xs text-stone-400 block">Total Combo Price</span>
+              <span class="text-4xl font-heading font-black text-amber-400">₹199/-</span>
+            </div>
+            <button class="add-to-tray-btn btn-gold px-6 py-3 rounded-xl font-black text-xs flex items-center gap-2" data-name="Combo 4 (Super Pizza + Cold Coffee)" data-price="199">
+              <i class="fa-solid fa-plus"></i> Add to Takeaway Tray
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STAR DISH SPOTLIGHT: KULHAR PIZZA @ 99 -->
+  <section class="py-16 relative">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="glass-panel rounded-3xl p-8 sm:p-12 border-2 border-orange-500 text-center space-y-4">
+        <span class="px-3 py-1 rounded-full text-xs font-black bg-orange-600 text-white inline-block">
+          CLAY POT PERFECTION
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-white">
+          Why People Travel Just For Our <span class="text-kulhad-gradient">Kulhar Pizza</span>?
+        </h2>
+        <p class="text-stone-300 max-w-xl mx-auto text-sm leading-relaxed">
+          Unlike ordinary flat pizzas, our Kulhar Pizza is layered inside a traditional clay <em>Kulhad</em>: crust bites, pizza sauce, diced veggies, secret seasonings, and heaps of mozzarella cheese baked until sizzling. Call <strong>9478015089</strong> to pre-order!
+        </p>
+        <div class="pt-4">
+          <span class="text-4xl font-heading font-black text-orange-400 block mb-4">Only ₹99/-</span>
+          <button class="add-to-tray-btn btn-kulhad px-8 py-3.5 rounded-xl font-black text-sm inline-flex items-center gap-2" data-name="Kulhar Pizza" data-price="99">
+            <i class="fa-solid fa-plus"></i> Add Kulhar Pizza to Takeaway Tray (₹99)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER WITH VIKASH ATTRIBUTION -->
+  <footer class="border-t border-stone-800 bg-[#0A0502] py-12 text-sm text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center">
+      <div>
+        <p>&copy; <span class="current-year">2026</span> COFFEE HUB. Good Food • Good Mood • Good Vibes.</p>
+        <p class="text-xs text-amber-400 mt-1">Call / WhatsApp: 9478015089</p>
+      </div>
+      <div class="flex items-center justify-center gap-2 text-amber-300 font-bold bg-stone-900/80 px-4 py-2 rounded-xl border border-amber-500/30 mt-4 sm:mt-0 shadow-md">
+        <span>✨ Designed & Developed with ❤️ by</span>
+        <span class="text-white bg-amber-500 text-black px-2 py-0.5 rounded-lg font-black">Vikash</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/919478015089?text=Hi%20Coffee%20Hub,%20I%20want%20to%20order%20Combos" target="_blank" class="whatsapp-fab w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center text-2xl" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <button id="back-to-top" class="back-to-top w-12 h-12 rounded-xl glass-panel text-amber-400 flex items-center justify-center text-lg border border-amber-500/30">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

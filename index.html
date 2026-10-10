@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COFFEE HUB | Good Food • Good Mood • Good Vibes</title>
+  <meta name="description" content="Welcome to Coffee Hub. Home of the famous ₹99 Kulhad Pizza, Handcrafted Burgers from ₹49, Chilled Cold Coffees from ₹69, and Value Combos from ₹129. Only Dine-In & Takeaway. Contact: 9478015089.">
+  <meta name="keywords" content="Coffee Hub, Kulhad Pizza, Cold Coffee, Burgers, Wraps, Street Cafe, Dine-In, Takeaway, Pure Veg Cafe, Vikash">
+
+  <!-- Open Graph / WhatsApp sharing -->
+  <meta property="og:title" content="COFFEE HUB - Har Cup Mein Khushi ♡">
+  <meta property="og:description" content="Taste the Crunch. Love the Pull. Visit COFFEE HUB for Kulhad Pizza @ ₹99, Combos from ₹129 & Thick Cold Coffee. Call / WhatsApp: 9478015089.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            cafe: {
+              espresso: '#120904',
+              mocha: '#1E0F07',
+              caramel: '#E5A93C',
+              gold: '#F59E0B',
+              kulhad: '#EA580C',
+              cream: '#FFF8F0',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#120904] text-[#FFF8F0] antialiased selection:bg-amber-500 selection:text-black relative">
+
+  <!-- POLICY NOTICE TOP BAR -->
+  <div class="policy-banner py-2 px-4 text-center text-xs sm:text-sm font-extrabold flex items-center justify-center gap-2 shadow-md">
+    <i class="fa-solid fa-store"></i>
+    <span>ONLY DINE-IN • TAKEAWAY • NO DELIVERY FACILITY</span>
+    <span class="hidden sm:inline">|</span>
+    <span>📞 ORDER / CALL: 9478015089</span>
+    <span class="hidden sm:inline">|</span>
+    <span class="hidden sm:inline">FRESHLY BAKED • 100% VEG</span>
+  </div>
+
+  <!-- Ambient Coffee Glow Orbs -->
+  <div class="ambient-glow w-96 h-96 bg-amber-600 top-20 left-[-80px]"></div>
+  <div class="ambient-glow w-96 h-96 bg-orange-700 top-[600px] right-[-100px]"></div>
+
+  <!-- STICKY NAVIGATION BAR -->
+  <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-black font-heading font-extrabold text-2xl shadow-lg shadow-amber-500/30 group-hover:rotate-6 transition-transform">
+          ☕
+        </div>
+        <div>
+          <span class="text-xl font-heading font-black tracking-tight text-white group-hover:text-amber-400 transition-colors">
+            COFFEE HUB
+          </span>
+          <span class="text-[11px] block font-semibold text-amber-400 tracking-wider">GOOD COFFEE • GOOD MOOD</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Clean, Spacious & Non-Wrapping) -->
+      <nav class="hidden md:flex items-center gap-2 lg:gap-6">
+        <a href="index.html" class="whitespace-nowrap px-3.5 py-2 rounded-xl text-sm font-black text-amber-400 bg-amber-500/10 border border-amber-500/30">Home</a>
+        <a href="menu.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Full Menu</a>
+        <a href="combos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Combos</a>
+        <a href="videos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Videos</a>
+        <a href="about.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Our Story</a>
+        <a href="contact.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      </nav>
+
+      <!-- Right CTA (Single Clean Action Button) -->
+      <div class="hidden sm:flex items-center">
+        <a href="menu.html" class="btn-gold px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 whitespace-nowrap shadow-lg">
+          <span>Order Takeaway</span>
+          <i class="fa-solid fa-bag-shopping text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a href="tel:9478015089" class="p-2 text-amber-400" aria-label="Call Coffee Hub">
+          <i class="fa-solid fa-phone text-lg"></i>
+        </a>
+        <button id="mobile-menu-btn" class="p-2 text-stone-200 hover:text-white" aria-label="Open Navigation">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-[#120904]/98 backdrop-blur-2xl hidden flex-col justify-between p-6 md:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-800">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-black font-bold">☕</div>
+          <span class="font-heading font-black text-white text-lg">COFFEE HUB</span>
+        </div>
+        <button id="mobile-menu-close" class="text-stone-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-3 mt-8">
+        <a href="index.html" class="px-4 py-3 rounded-xl bg-amber-500/10 text-amber-400 font-bold border border-amber-500/30">Home</a>
+        <a href="menu.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Full Menu</a>
+        <a href="combos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Combos</a>
+        <a href="videos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Videos</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Our Story</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Contact</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-stone-800">
+      <a href="tel:9478015089" class="btn-gold w-full py-3.5 rounded-xl text-center font-black block mb-2">📞 Call: 9478015089</a>
+      <p class="text-xs text-center text-amber-300 font-semibold">Only Dine-In & Takeaway Available</p>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="pt-12 pb-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
+          
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-amber-500/40 text-xs sm:text-sm font-bold text-amber-400">
+            <span>✨ Har Cup Mein Khushi ♡</span>
+            <span class="text-stone-500">|</span>
+            <span class="text-white">Desi Swag • Desi Flavours</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight leading-[1.12] text-white">
+            Good Food. Good Mood. <br>
+            <span class="text-gold-gradient">Good Vibes ♡</span>
+          </h1>
+
+          <p class="text-lg sm:text-xl text-stone-300 max-w-xl leading-relaxed">
+            Welcome to <strong>Coffee Hub</strong> — your favorite outdoor hangout spot! Craving our viral <strong class="text-orange-400">₹99 Kulhar Pizza</strong> with melty cheese pull, handcrafted burgers from <strong class="text-amber-400">₹49</strong>, or thick chilled cold coffees from <strong class="text-amber-400">₹69</strong>? Call us at <strong class="text-amber-400">9478015089</strong> for quick takeaway!
+          </p>
+
+          <!-- Action CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="menu.html" class="btn-gold px-8 py-4 rounded-xl text-base font-extrabold flex items-center gap-3">
+              <i class="fa-solid fa-utensils"></i>
+              <span>Explore Menu & Prices</span>
+            </a>
+            <a href="combos.html" class="btn-kulhad px-6 py-4 rounded-xl text-base font-extrabold flex items-center gap-2">
+              <i class="fa-solid fa-fire"></i>
+              <span>Viral Kulhar Pizza @ ₹99</span>
+            </a>
+          </div>
+
+          <!-- Feature Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-stone-800">
+            <div class="p-3 rounded-xl bg-stone-900/60 border border-stone-800 text-center">
+              <i class="fa-solid fa-leaf text-green-400 text-lg mb-1 block"></i>
+              <span class="text-xs font-bold text-white block">100% Pure Veg</span>
+              <span class="text-[10px] text-stone-400">Fresh Ingredients</span>
+            </div>
+            <div class="p-3 rounded-xl bg-stone-900/60 border border-stone-800 text-center">
+              <i class="fa-solid fa-mug-hot text-amber-400 text-lg mb-1 block"></i>
+              <span class="text-xs font-bold text-white block">Thick Cold Coffee</span>
+              <span class="text-[10px] text-stone-400">Starting @ ₹69/-</span>
+            </div>
+            <div class="p-3 rounded-xl bg-stone-900/60 border border-stone-800 text-center">
+              <i class="fa-solid fa-pizza-slice text-orange-400 text-lg mb-1 block"></i>
+              <span class="text-xs font-bold text-white block">Kulhad Pizza</span>
+              <span class="text-[10px] text-stone-400">Only @ ₹99/-</span>
+            </div>
+            <div class="p-3 rounded-xl bg-stone-900/60 border border-stone-800 text-center">
+              <i class="fa-solid fa-phone text-yellow-400 text-lg mb-1 block"></i>
+              <span class="text-xs font-bold text-white block">Call 9478015089</span>
+              <span class="text-[10px] text-stone-400">Direct Takeaway</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual Showcase Card -->
+        <div class="lg:col-span-5 relative" data-aos="fade-left">
+          
+          <div class="glass-panel rounded-3xl p-4 sm:p-5 border-2 border-amber-500/40 relative overflow-hidden shadow-2xl food-card space-y-4">
+            
+            <!-- Real Hero Van Photo -->
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-stone-900 border border-amber-500/30 group shadow-xl">
+              <img src="assets/images/hero-banner.jpg" alt="Coffee Hub Van Ambience" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+              
+              <div class="absolute top-3 left-3 bg-black/80 px-3 py-1 rounded-full text-[11px] font-black text-amber-400 border border-amber-500/40">
+                ☕ Official Coffee Hub Outdoor Van
+              </div>
+
+              <!-- Watch Live Video Button Overlay -->
+              <button class="open-video-btn absolute bottom-3 right-3 btn-gold px-3.5 py-1.5 rounded-xl text-xs font-black flex items-center gap-1.5 shadow-xl" data-video-title="Coffee Hub Reel 1" data-video-src="assets/video/video-1.mp4">
+                <i class="fa-solid fa-play text-[10px]"></i> Watch Video 1
+              </button>
+            </div>
+
+            <!-- Quick Item Cards Carousel -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="p-3 rounded-xl bg-black/60 border border-stone-800 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-orange-500/20 text-orange-400 flex items-center justify-center text-xl shrink-0">🍕</div>
+                <div>
+                  <span class="text-[11px] text-stone-400 block">Kulhar Pizza</span>
+                  <span class="text-sm font-extrabold text-orange-400">₹99/- Only</span>
+                </div>
+              </div>
+
+              <div class="p-3 rounded-xl bg-black/60 border border-stone-800 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl shrink-0">🍔</div>
+                <div>
+                  <span class="text-[11px] text-stone-400 block">Burgers</span>
+                  <span class="text-sm font-extrabold text-amber-400">From ₹49/-</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Notice Tag -->
+            <div class="p-3 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-between text-xs">
+              <span class="text-amber-300 font-bold"><i class="fa-solid fa-bell mr-1"></i> Dine-In & Takeaway Only</span>
+              <a href="tel:9478015089" class="text-white hover:text-amber-400 font-extrabold">Call: 9478015089 &rarr;</a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STAR DISH SPOTLIGHT: KULHAR PIZZA @ ₹99 -->
+  <section class="py-20 relative bg-gradient-to-b from-stone-950/80 to-[#120904]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="glass-panel rounded-3xl p-8 sm:p-12 border-2 border-orange-500/40 relative overflow-hidden shadow-2xl" data-aos="zoom-in">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          
+          <!-- Visual Column with Real Kulhar Pizza Banner + Uncropped Video 2 -->
+          <div class="lg:col-span-6 space-y-4">
+            <div class="relative rounded-2xl overflow-hidden border border-orange-500/40 shadow-2xl bg-black group">
+              <img src="assets/images/kulhar-pizza-special.jpg" alt="Kulhar Pizza Special Poster" class="w-full h-auto object-cover rounded-2xl">
+              <div class="absolute top-4 right-4 bg-orange-600 text-white font-black px-4 py-1.5 rounded-xl text-base shadow-lg">
+                ₹99/- ONLY
+              </div>
+            </div>
+
+            <!-- Video 2 Uncropped Full Player -->
+            <div class="relative rounded-2xl overflow-hidden aspect-video border border-amber-500/30 shadow-2xl bg-black flex items-center justify-center">
+              <video src="assets/video/video-2.mp4" controls playsinline loop muted class="w-full h-full object-contain bg-black">
+                Your browser does not support the video tag.
+              </video>
+              <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1 rounded-lg border border-orange-500/30 text-xs font-bold text-orange-300 pointer-events-none">
+                🧀 Live Video 2 (Uncut Full View)
+              </div>
+            </div>
+          </div>
+
+          <!-- Description Column -->
+          <div class="lg:col-span-6 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/30 text-xs font-extrabold">
+              🔥 MOST ORDERED SIGNATURE ITEM
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-white">
+              Kulhar Pizza <br>
+              <span class="text-kulhad-gradient">Baked in Earthen Kulhad</span>
+            </h2>
+
+            <p class="text-stone-300 text-base leading-relaxed">
+              Experience the authentic Indian rustic flavor meets cheesy Italian indulgence! Loaded with sweet corn, onions, capsicum, secret spice blend, and a mountain of mozzarella baked inside a traditional clay <em>Kulhad</em> until bubbly and golden.
+            </p>
+
+            <div class="space-y-2 text-sm text-stone-200">
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-400"></i> <strong>100% Pure Veg:</strong> Fresh veggies & premium cheese</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-orange-400"></i> <strong>Clay Aroma:</strong> Earthy fragrance baked directly in kulhad</div>
+              <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-amber-400"></i> <strong>Insane Cheese Pull:</strong> Unmatched gooey cheese experience</div>
+            </div>
+
+            <div class="pt-4 flex flex-wrap items-center gap-4">
+              <a href="menu.html" class="btn-kulhad px-8 py-3.5 rounded-xl font-extrabold text-sm flex items-center gap-2">
+                <span>View All Pizzas</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="tel:9478015089" class="btn-outline px-6 py-3.5 rounded-xl text-sm font-bold">
+                Order via Phone: 9478015089
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VIDEO SHOWCASE SECTION (Uncropped object-contain players) -->
+  <section class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+        <span class="text-amber-400 font-extrabold text-xs uppercase tracking-widest block mb-2">
+          SEE IT SIZZLE & BREW (OFFICIAL VIDEOS)
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-white">
+          Coffee Hub in <span class="text-gold-gradient">Motion & Video</span>
+        </h2>
+        <p class="text-stone-300 text-sm mt-3">
+          Watch our uncut official videos recorded at Coffee Hub! Play directly below or open fullscreen.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Video 1 Player -->
+        <div class="video-card-container group food-card" data-aos="fade-right">
+          <div class="relative aspect-video bg-black flex items-center justify-center">
+            <video src="assets/video/video-1.mp4" controls playsinline class="w-full h-full object-contain bg-black">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="p-6 bg-stone-950/90 border-t border-amber-500/20 flex items-center justify-between">
+            <div>
+              <span class="text-xs font-bold text-orange-400 uppercase">OFFICIAL CAFE REEL 1</span>
+              <h3 class="text-lg font-heading font-extrabold text-white">Coffee Hub Special Video #1</h3>
+            </div>
+            <button class="open-video-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold" data-video-title="Coffee Hub Video 1" data-video-src="assets/video/video-1.mp4">
+              <i class="fa-solid fa-expand mr-1"></i> Fullscreen
+            </button>
+          </div>
+        </div>
+
+        <!-- Video 2 Player (Uncropped) -->
+        <div class="video-card-container group food-card" data-aos="fade-left">
+          <div class="relative aspect-video bg-black flex items-center justify-center">
+            <video src="assets/video/video-2.mp4" controls playsinline class="w-full h-full object-contain bg-black">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="p-6 bg-stone-950/90 border-t border-amber-500/20 flex items-center justify-between">
+            <div>
+              <span class="text-xs font-bold text-amber-400 uppercase">OFFICIAL CAFE REEL 2</span>
+              <h3 class="text-lg font-heading font-extrabold text-white">Coffee Hub Special Video #2 (Uncut)</h3>
+            </div>
+            <button class="open-video-btn btn-gold px-4 py-2 rounded-xl text-xs font-bold" data-video-title="Coffee Hub Video 2" data-video-src="assets/video/video-2.mp4">
+              <i class="fa-solid fa-expand mr-1"></i> Fullscreen
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- IRRESISTIBLE COMBOS SECTION (Starting @ ₹129/-) -->
+  <section class="py-20 bg-stone-950/70 border-y border-amber-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6" data-aos="fade-up">
+        <div>
+          <span class="text-amber-400 font-extrabold text-xs uppercase tracking-widest block mb-2">
+            BEST VALUE DEALS
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-heading font-black text-white">
+            Combos Starting @ <span class="text-gold-gradient">₹129/- Only</span>
+          </h2>
+          <p class="text-stone-300 text-sm mt-1">
+            Freshen up your break with our mouthwatering hunger-buster combos! Call: 9478015089
+          </p>
+        </div>
+        <a href="combos.html" class="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 font-bold text-sm">
+          <span>View All Combo Variations</span> &rarr;
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Combo 1 -->
+        <div class="glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-aos="fade-up">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-500 text-black">COMBO 1</span>
+              <span class="veg-badge"></span>
+            </div>
+            <h3 class="text-xl font-heading font-black text-white mb-1">Paneer Burger + Cold Coffee</h3>
+            <p class="text-xs text-stone-400 mb-4">Classic soft paneer patty burger with crispy veggies + Ice Cold Coffee.</p>
+          </div>
+          <div>
+            <div class="text-3xl font-heading font-black text-amber-400 mb-4">₹129/-</div>
+            <button class="add-to-tray-btn btn-gold w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2" data-name="Combo 1 (Paneer Burger + Cold Coffee)" data-price="129">
+              <i class="fa-solid fa-plus"></i> Add to Takeaway Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- Combo 2 -->
+        <div class="glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-orange-500 text-white">COMBO 2</span>
+              <span class="veg-badge"></span>
+            </div>
+            <h3 class="text-xl font-heading font-black text-white mb-1">Special Wrap + Cold Coffee</h3>
+            <p class="text-xs text-stone-400 mb-4">Loaded spicy veggie wrap with chipotle & mint mayo + Chilled Coffee.</p>
+          </div>
+          <div>
+            <div class="text-3xl font-heading font-black text-amber-400 mb-4">₹169/-</div>
+            <button class="add-to-tray-btn btn-gold w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2" data-name="Combo 2 (Special Wrap + Cold Coffee)" data-price="169">
+              <i class="fa-solid fa-plus"></i> Add to Takeaway Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- Combo 3 -->
+        <div class="glass-panel rounded-2xl p-6 food-card border border-stone-800 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-yellow-500 text-black">COMBO 3</span>
+              <span class="veg-badge"></span>
+            </div>
+            <h3 class="text-xl font-heading font-black text-white mb-1">Veg Sandwich + Cold Coffee</h3>
+            <p class="text-xs text-stone-400 mb-4">Fresh grilled vegetables & cheese sandwich + Chilled Coffee Shake.</p>
+          </div>
+          <div>
+            <div class="text-3xl font-heading font-black text-amber-400 mb-4">₹149/-</div>
+            <button class="add-to-tray-btn btn-gold w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2" data-name="Combo 3 (Veg Sandwich + Cold Coffee)" data-price="149">
+              <i class="fa-solid fa-plus"></i> Add to Takeaway Tray
+            </button>
+          </div>
+        </div>
+
+        <!-- Combo 4 -->
+        <div class="glass-panel rounded-2xl p-6 food-card border-2 border-amber-500 relative flex flex-col justify-between shadow-xl" data-aos="fade-up" data-aos-delay="300">
+          <div class="absolute -top-3 right-4 px-2 py-0.5 rounded-full text-[10px] font-black bg-orange-600 text-white">
+            CHEF'S SPECIAL
+          </div>
+          <div>
+            <div class="flex justify-between items-center mb-3">
+              <span class="px-3 py-1 rounded-full text-xs font-black bg-red-600 text-white">COMBO 4</span>
+              <span class="veg-badge"></span>
+            </div>
+            <h3 class="text-xl font-heading font-black text-white mb-1">Super Pizza + Cold Coffee</h3>
+            <p class="text-xs text-stone-400 mb-4">Loaded cheesy veg pizza with golden crust + Chilled chocolate cold coffee.</p>
+          </div>
+          <div>
+            <div class="text-3xl font-heading font-black text-amber-400 mb-4">₹199/-</div>
+            <button class="add-to-tray-btn btn-gold w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2" data-name="Combo 4 (Super Pizza + Cold Coffee)" data-price="199">
+              <i class="fa-solid fa-plus"></i> Add to Takeaway Tray
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OFFICIAL CAFE POSTERS & SPECIALS GALLERY -->
+  <section class="py-20 relative bg-stone-950/60 border-b border-amber-500/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
+        <span class="text-amber-400 font-extrabold text-xs uppercase tracking-widest block mb-2">
+          OFFICIAL MENU POSTERS & SPECIALS
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-white">
+          Coffee Hub <span class="text-gold-gradient">Visual Specials</span>
+        </h2>
+        <p class="text-stone-300 text-sm mt-2">
+          Authentic menu specials photographed and designed for Coffee Hub! Tap any poster to explore.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Poster 1: Burgers -->
+        <div class="glass-panel rounded-3xl overflow-hidden border-2 border-stone-800 hover:border-amber-500/60 transition-all duration-300 shadow-xl group flex flex-col justify-between" data-aos="fade-up">
+          <div class="overflow-hidden bg-black aspect-[3/4] relative">
+            <img src="assets/images/burger-special.jpg" alt="Coffee Hub Burger Menu Starting @ 49" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-black/80 px-2.5 py-1 rounded-full text-[10px] font-black text-amber-400 border border-amber-500/40">
+              🍔 Burger Special
+            </div>
+          </div>
+          <div class="p-5 bg-stone-900/90 border-t border-stone-800">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-heading font-bold text-white text-base">Burgers from ₹49/-</span>
+              <span class="text-xs font-bold text-green-400">Pure Veg</span>
+            </div>
+            <p class="text-xs text-stone-400 mb-4">Crispy Aloo Tikki ₹49, Paneer Burger ₹79 with melted cheese.</p>
+            <a href="menu.html" class="btn-gold w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+              <span>View Burgers</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Poster 2: Cold Coffee -->
+        <div class="glass-panel rounded-3xl overflow-hidden border-2 border-stone-800 hover:border-amber-500/60 transition-all duration-300 shadow-xl group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div class="overflow-hidden bg-black aspect-[3/4] relative">
+            <img src="assets/images/cold-coffee-special.jpg" alt="Coffee Hub Cold Coffee Starting @ 69" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-black/80 px-2.5 py-1 rounded-full text-[10px] font-black text-amber-400 border border-amber-500/40">
+              ☕ Cold Coffee Special
+            </div>
+          </div>
+          <div class="p-5 bg-stone-900/90 border-t border-stone-800">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-heading font-bold text-white text-base">Cold Coffee @ ₹69/-</span>
+              <span class="text-xs font-bold text-amber-400">Har Cup Mein Khushi</span>
+            </div>
+            <p class="text-xs text-stone-400 mb-4">Classic ₹69, Roasted Hazelnut ₹89 with whipped cream swirls.</p>
+            <a href="menu.html" class="btn-gold w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+              <span>View Shakes & Coffee</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Poster 3: Combos -->
+        <div class="glass-panel rounded-3xl overflow-hidden border-2 border-stone-800 hover:border-amber-500/60 transition-all duration-300 shadow-xl group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div class="overflow-hidden bg-black aspect-[3/4] relative">
+            <img src="assets/images/combos-special.jpg" alt="Coffee Hub Combos Starting @ 129" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-black/80 px-2.5 py-1 rounded-full text-[10px] font-black text-amber-400 border border-amber-500/40">
+              🍱 Combos Starting ₹129
+            </div>
+          </div>
+          <div class="p-5 bg-stone-900/90 border-t border-stone-800">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-heading font-bold text-white text-base">Combos from ₹129/-</span>
+              <span class="text-xs font-bold text-orange-400">Top Value</span>
+            </div>
+            <p class="text-xs text-stone-400 mb-4">Combos 1 to 4 with burger, wrap, sandwich or pizza + cold coffee.</p>
+            <a href="combos.html" class="btn-gold w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+              <span>View 4 Combos</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Poster 4: Official Menu Card -->
+        <div class="glass-panel rounded-3xl overflow-hidden border-2 border-stone-800 hover:border-amber-500/60 transition-all duration-300 shadow-xl group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+          <div class="overflow-hidden bg-black aspect-[3/4] relative">
+            <img src="assets/images/official-menu-card.jpg" alt="Coffee Hub Official Menu Board" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute top-3 left-3 bg-black/80 px-2.5 py-1 rounded-full text-[10px] font-black text-amber-400 border border-amber-500/40">
+              📋 Official Menu Card
+            </div>
+          </div>
+          <div class="p-5 bg-stone-900/90 border-t border-stone-800">
+            <div class="flex items-center justify-between mb-2">
+              <span class="font-heading font-bold text-white text-base">Full Cafe Menu</span>
+              <span class="text-xs font-bold text-yellow-400">Complete List</span>
+            </div>
+            <p class="text-xs text-stone-400 mb-4">Every pizza, wrap, sandwich, fries, and cold drink with direct takeaway tray.</p>
+            <a href="menu.html" class="btn-gold w-full py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+              <span>Open Menu Page</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GOOGLE MAPS EMBED SECTION -->
+  <section class="py-20 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
+        <span class="text-amber-400 font-extrabold text-xs uppercase tracking-widest block mb-2">
+          VISIT US TODAY
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-heading font-black text-white">
+          Find Coffee Hub on <span class="text-gold-gradient">Google Maps</span>
+        </h2>
+        <p class="text-stone-300 text-sm mt-2">
+          Open 11:00 AM - 11:00 PM Daily. Call: <a href="tel:9478015089" class="text-amber-400 font-bold hover:underline">9478015089</a>
+        </p>
+      </div>
+
+      <div class="glass-panel rounded-3xl p-4 sm:p-6 border border-amber-500/30 overflow-hidden shadow-2xl" data-aos="zoom-in">
+        <div class="rounded-2xl overflow-hidden w-full border border-stone-800" style="min-height: 400px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d214.54264159841475!2d76.73835065811893!3d30.64291097777142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1791626832715!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TAKEAWAY TRAY FLOATING BAR -->
+  <div id="takeaway-tray-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-[#1E0F07] border-t-2 border-amber-500 py-3 px-4 shadow-2xl transition-transform duration-300 translate-y-full flex items-center justify-between max-w-4xl mx-auto rounded-t-2xl">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-amber-500 text-black flex items-center justify-center font-black">
+        <span id="tray-count">0</span>
+      </div>
+      <div>
+        <span class="text-xs text-stone-300 block">Takeaway Pre-Order Tray</span>
+        <span id="tray-total" class="text-lg font-heading font-black text-amber-400">₹0</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button id="tray-clear-btn" class="px-3 py-2 text-xs text-stone-400 hover:text-white">Clear</button>
+      <button id="tray-whatsapp-btn" class="btn-gold px-5 py-2.5 rounded-xl text-xs font-black flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp text-sm"></i>
+        <span>WhatsApp Order (9478015089)</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- VIDEO MODAL POPUP -->
+  <div id="video-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="glass-panel rounded-3xl p-6 max-w-3xl w-full border border-amber-500/40 relative space-y-4">
+      <div class="flex items-center justify-between pb-2 border-b border-stone-800">
+        <h3 id="video-modal-title" class="text-lg font-heading font-black text-white">Coffee Hub Reel</h3>
+        <button id="close-video-modal" class="text-stone-400 hover:text-white p-1 text-xl">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="aspect-video w-full rounded-2xl overflow-hidden bg-black border border-stone-800 flex items-center justify-center">
+        <video id="video-modal-player" controls playsinline class="w-full h-full object-contain bg-black">
+          <source src="assets/video/video-1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p class="text-xs text-stone-400 text-center">
+        ☕ Official Coffee Hub Video Player • Call: 9478015089
+      </p>
+    </div>
+  </div>
+
+  <!-- FOOTER WITH VIKASH ATTRIBUTION & CONTACT -->
+  <footer class="border-t border-stone-800 bg-[#0A0502] pt-14 pb-12 text-sm text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+        
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">☕</span>
+            <span class="text-2xl font-heading font-black text-white">COFFEE HUB</span>
+          </div>
+          <p class="text-xs text-amber-400 font-bold uppercase tracking-wider">Good Coffee • Good Mood • Good Vibes ♡</p>
+          <p class="text-xs text-stone-400 max-w-sm leading-relaxed">
+            Freshly prepared burgers, wraps, shakes, cold coffees, and the star Kulhar Pizza baked in traditional earthen clay pots. 100% Pure Vegetarian.
+          </p>
+          <div class="pt-2 text-xs">
+            <span class="text-stone-300 font-bold">Contact / Pre-Order:</span>
+            <a href="tel:9478015089" class="text-amber-400 font-black ml-1 hover:underline text-sm">9478015089</a>
+          </div>
+          <p class="text-xs font-bold text-orange-400 pt-1">
+            ⚠️ NOTICE: Only Dine-In & Takeaway. No delivery facility.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li><a href="menu.html" class="hover:text-amber-400">Full Menu & Prices</a></li>
+            <li><a href="combos.html" class="hover:text-amber-400">Combos & Specials</a></li>
+            <li><a href="videos.html" class="hover:text-amber-400">Videos & Reels Section</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">Our Story & Ambience</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400">Location & Timings</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Timings & Service</h4>
+          <p class="text-xs text-stone-300">Open Daily: 11:00 AM - 11:00 PM</p>
+          <p class="text-xs text-stone-400 mt-1">Service: Dine-In & Takeaway</p>
+          <p class="text-xs text-stone-400 mt-1">Specialty: ₹99 Kulhar Pizza</p>
+          <a href="https://wa.me/919478015089?text=Hi%20Coffee%20Hub,%20I%20want%20to%20order%20Takeaway" target="_blank" class="inline-flex items-center gap-2 mt-4 text-xs font-bold text-green-400 hover:underline">
+            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: 9478015089
+          </a>
+        </div>
+
+      </div>
+
+      <!-- CREDITS SECTION (Vikash Attribution) -->
+      <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-3">
+        <p>&copy; <span class="current-year">2026</span> COFFEE HUB. All Rights Reserved.</p>
+        <div class="flex items-center gap-2 text-amber-300 font-bold bg-stone-900/80 px-4 py-2 rounded-xl border border-amber-500/30 shadow-md">
+          <span>✨ Designed & Developed with ❤️ by</span>
+          <span class="text-white bg-amber-500 text-black px-2 py-0.5 rounded-lg font-black">Vikash</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON (Connected to 9478015089) -->
+  <a href="https://wa.me/919478015089?text=Hi%20Coffee%20Hub,%20I%20want%20to%20order%20from%20the%20menu" target="_blank" class="whatsapp-fab w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center text-2xl" aria-label="WhatsApp Order">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top w-12 h-12 rounded-xl glass-panel text-amber-400 flex items-center justify-center text-lg border border-amber-500/30" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <!-- Main Script -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
