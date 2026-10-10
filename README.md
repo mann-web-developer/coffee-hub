@@ -1,7 +1,7 @@
 # ☕ COFFEE HUB - Official Multi-Page Cafe Website
 
-> **Good Food • Good Mood • Good Vibes ♡**  
-> *Har Cup Mein Khushi ♡ | Desi Swag • Desi Flavours*  
+> **Good Food • Good Mood • Good Vibes**  
+> *Har Cup Mein Khushi | Desi Swag • Desi Flavours*  
 > **Est. 2024 • Fresh • Hot • Delicious**  
 > ⚠️ **Notice**: Only Dine-In & Takeaway • No Delivery Facility
 
@@ -102,4 +102,6 @@ git push -u origin main
 
 ---
 
-Crafted with love for **COFFEE HUB** ☕🍕🍔
+**Developed by Vikash**  
+Call / WhatsApp: 9478015089  
+Coffee Hub - Official Website Project

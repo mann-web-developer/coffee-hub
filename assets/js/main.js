@@ -1,6 +1,6 @@
 /**
- * COFFEE HUB - OFFICIAL JAVASCRIPT ENGINE
- * Developer: Vikash
+ * Coffee Hub - Main Scripts
+ * Developed by Vikash
  * Contact: +91 94780 15089
  */
 
