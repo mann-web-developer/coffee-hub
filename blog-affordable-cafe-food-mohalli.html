@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looking for Affordable Café Food in Mohali? | Coffee Hub Sector 82</title>
+  <meta name="description" content="Discover tasty, pocket-friendly vegetarian food at Coffee Hub Mohali. Handcrafted burgers starting at ₹49, Kulhar Pizza ₹99, cold coffees, and value combos near Amity University.">
+  <meta name="keywords" content="Kulhar Pizza in Sector 82 Mohali, affordable cafe food Mohali, cheap coffee shops near me, best coffee places near me, cafes open near me, student cafe Amity University Mohali, pure veg cafe IT City Road">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Looking for Affordable Café Food? Discover Good Food at Coffee Hub Mohali">
+  <meta property="og:description" content="Good Food. Good Mood. Good Vibes. Enjoy tasty vegetarian café treats without breaking the bank in Sector 82A Mohali.">
+  <meta property="og:image" content="assets/images/food-spread-table.jpg">
+  <meta property="og:type" content="article">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#120904] text-[#FFF8F0] font-sans antialiased selection:bg-amber-500 selection:text-black">
+
+  <!-- STICKY NAVIGATION BAR -->
+  <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-black font-heading font-extrabold text-2xl shadow-lg shadow-amber-500/30 group-hover:rotate-6 transition-transform">
+          ☕
+        </div>
+        <div>
+          <span class="text-xl font-heading font-black tracking-tight text-white group-hover:text-amber-400 transition-colors">
+            COFFEE HUB
+          </span>
+          <span class="text-[11px] block font-semibold text-amber-400 tracking-wider">GOOD COFFEE • GOOD MOOD</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-2 lg:gap-5">
+        <a href="index.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Home</a>
+        <a href="menu.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Full Menu</a>
+        <a href="combos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Combos</a>
+        <a href="blog.html" class="whitespace-nowrap px-3.5 py-2 rounded-xl text-sm font-black text-amber-400 bg-amber-500/10 border border-amber-500/30">Food Journal</a>
+        <a href="videos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Videos</a>
+        <a href="about.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Our Story</a>
+        <a href="contact.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      </nav>
+
+      <!-- Right CTA -->
+      <div class="hidden sm:flex items-center">
+        <a href="menu.html" class="btn-gold px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 whitespace-nowrap shadow-lg">
+          <span>Order Takeaway</span>
+          <i class="fa-solid fa-bag-shopping text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a href="tel:9478015089" class="p-2 text-amber-400" aria-label="Call Coffee Hub">
+          <i class="fa-solid fa-phone text-lg"></i>
+        </a>
+        <button id="mobile-menu-btn" class="p-2 text-stone-200 hover:text-white" aria-label="Open Navigation">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-[#120904]/98 backdrop-blur-2xl hidden flex-col justify-between p-6 md:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-800">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-black font-bold">☕</div>
+          <span class="font-heading font-black text-white text-lg">COFFEE HUB</span>
+        </div>
+        <button id="mobile-menu-close" class="text-stone-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-3 mt-8">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Home</a>
+        <a href="menu.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Full Menu</a>
+        <a href="combos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Combos</a>
+        <a href="blog.html" class="px-4 py-3 rounded-xl bg-amber-500/10 text-amber-400 font-bold border border-amber-500/30">Food Journal (Blogs)</a>
+        <a href="videos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Videos</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Our Story</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Contact</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-stone-800">
+      <a href="https://wa.me/919478015089" target="_blank" class="w-full btn-gold py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>WhatsApp Takeaway: 9478015089</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMBS -->
+  <div class="bg-stone-950/70 border-b border-stone-800/80 py-3">
+    <div class="max-w-4xl mx-auto px-4 flex items-center gap-2 text-xs text-stone-400">
+      <a href="index.html" class="hover:text-amber-400">Home</a>
+      <span>/</span>
+      <a href="blog.html" class="hover:text-amber-400">Food Journal</a>
+      <span>/</span>
+      <span class="text-amber-400 truncate">Affordable Café Food at Coffee Hub</span>
+    </div>
+  </div>
+
+  <!-- MAIN ARTICLE -->
+  <article class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <!-- Article Header -->
+      <header class="mb-8" data-aos="fade-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/40 text-xs font-black uppercase tracking-wider mb-4">
+          🥪 Pocket Friendly Food Guide • Mohali
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-white leading-tight mb-4">
+          Looking for Affordable Café Food? Discover Good Food at Coffee Hub
+        </h1>
+        <div class="flex flex-wrap items-center gap-4 text-xs text-stone-400 border-b border-stone-800 pb-6">
+          <span><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 3 min read</span>
+          <span>•</span>
+          <span>By <strong>Coffee Hub Editorial</strong></span>
+          <span>•</span>
+          <span class="text-amber-400">Specialty: <strong>Kulhar Pizza in Sector 82 Mohali</strong></span>
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="rounded-3xl overflow-hidden border-2 border-amber-500/30 shadow-2xl mb-10 bg-black" data-aos="zoom-in">
+        <img src="assets/images/food-spread-table.jpg" alt="Affordable Cafe Food at Coffee Hub Mohali" class="w-full h-auto object-cover">
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose prose-invert max-w-none text-stone-300 text-base sm:text-lg leading-relaxed space-y-6" data-aos="fade-up">
+        
+        <p class="text-xl text-stone-200 font-medium leading-relaxed">
+          Finding a café that offers tasty food at affordable prices can make any day better. Whether you want a quick snack after work, a casual outing with friends, or something delicious to enjoy during your break, a good café is always a welcome choice.
+        </p>
+
+        <p>
+          <strong>Coffee Hub</strong> brings together good food, refreshing drinks, and a relaxed outdoor café experience without making every visit expensive. Situated conveniently in Sector 82A, it is the go-to spot for students from nearby universities and professionals from the IT City corridor.
+        </p>
+
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-white pt-4 border-t border-stone-800/80">
+          Enjoy More Food Without Stretching Your Budget
+        </h2>
+        <p>
+          Eating out does not always have to mean spending a lot. Sometimes, all you need is a satisfying burger, a cheesy pizza, or a refreshing cold coffee to make your day better.
+        </p>
+        <p>
+          At Coffee Hub, you can explore a wide range of 100% vegetarian food options, including:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          <div class="glass-panel p-5 rounded-2xl border border-stone-800">
+            <div class="text-2xl mb-2">🏺</div>
+            <h3 class="text-lg font-bold text-amber-400 mb-1">Kulhar Pizza (@ ₹99)</h3>
+            <p class="text-xs sm:text-sm text-stone-300">
+              A signature option for pizza lovers who enjoy something different. Baked in traditional earthen clay cups with melted cheese pull.
+            </p>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-stone-800">
+            <div class="text-2xl mb-2">🍔</div>
+            <h3 class="text-lg font-bold text-amber-400 mb-1">Burgers (Starting @ ₹49)</h3>
+            <p class="text-xs sm:text-sm text-stone-300">
+              A convenient choice for a quick and satisfying bite. From Aloo Tikki to Paneer and Cheese Corn Burgers.
+            </p>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-stone-800">
+            <div class="text-2xl mb-2">☕</div>
+            <h3 class="text-lg font-bold text-amber-400 mb-1">Cold Coffee (Starting @ ₹69)</h3>
+            <p class="text-xs sm:text-sm text-stone-300">
+              A refreshing chilled beverage with rich creamy blend to enjoy alone or with your favourite snacks.
+            </p>
+          </div>
+          <div class="glass-panel p-5 rounded-2xl border border-stone-800">
+            <div class="text-2xl mb-2">🍱</div>
+            <h3 class="text-lg font-bold text-amber-400 mb-1">Food Combos (From ₹129)</h3>
+            <p class="text-xs sm:text-sm text-stone-300">
+              An economical option when you want to pair snacks and drinks together. Max value for lunch or evening breaks.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          With selected menu items advertised at budget-friendly prices, Coffee Hub makes casual café visits accessible to students, working professionals, and anyone looking for a quick, wholesome food break.
+        </p>
+
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-white pt-4 border-t border-stone-800/80">
+          A Place for Everyday Food Cravings
+        </h2>
+        <p>
+          Sometimes, you want a light snack rather than a full meal. On other occasions, you may want to sit with friends, enjoy a lively conversation, and share something delicious under the open sky.
+        </p>
+        <p>
+          A café can be the perfect setting for both.
+        </p>
+        <p>
+          Whether you are stopping by for a quick bite or planning an informal get-together, Coffee Hub offers food and beverages suited to everyday cravings.
+        </p>
+
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-white pt-4">
+          What Should You Try at Coffee Hub?
+        </h2>
+        <p>
+          If you are visiting for the first time, start by exploring the signature <strong>Kulhar Pizza in Sector 82 Mohali</strong>. You can also consider pairing your favourite snack with a chilled cold coffee for a simple café-style treat.
+        </p>
+        <p class="text-xs text-stone-400">
+          Check the latest menu for available items, prices, and combinations before placing your order.
+        </p>
+
+        <!-- LOCATION CALLOUT -->
+        <div class="glass-panel rounded-3xl p-8 border-2 border-amber-500/40 my-8 shadow-xl bg-gradient-to-r from-stone-900 to-[#180d06]">
+          <h3 class="text-2xl font-heading font-black text-white mb-3">
+            Visit Coffee Hub in Mohali, Punjab
+          </h3>
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed mb-4">
+            Looking for affordable vegetarian café food in Mohali, Punjab? Explore <strong>Coffee Hub, Near Gate-2 Amity University Punjab, Sector 82A IT City Road</strong>. Make Coffee Hub a stop on your next food outing.
+          </p>
+          <div class="p-4 rounded-2xl bg-black/60 border border-stone-800 text-amber-300 text-sm mb-6">
+            <p class="font-bold">✨ Good Food. Good Mood. Good Vibes.</p>
+            <p class="text-stone-300 text-xs mt-1">Explore our menu, discover your favourites, and enjoy good food with good company.</p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://wa.me/919478015089?text=Hi%20Coffee%20Hub,%20I%20want%20to%20order%20affordable%20snacks" target="_blank" class="btn-gold px-6 py-3 rounded-xl text-xs sm:text-sm font-black flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>Takeaway Pre-Order (9478015089)</span>
+            </a>
+            <a href="menu.html" class="px-5 py-3 rounded-xl bg-stone-900 border border-stone-700 hover:border-amber-400 text-white font-bold text-xs sm:text-sm transition-all flex items-center gap-2">
+              <span>Explore Menu & Combos</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation to Other Articles -->
+      <div class="mt-12 pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="blog-what-is-kulhar-pizza.html" class="text-xs text-amber-400 hover:underline flex items-center gap-2">
+          &larr; Previous: What Is Kulhar Pizza?
+        </a>
+        <a href="blog-cold-coffee-cafe-snacks.html" class="text-xs text-stone-300 hover:text-amber-400 flex items-center gap-2">
+          <span>Next: Cold Coffee and Café Snacks</span> &rarr;
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-stone-800 bg-[#0A0502] pt-14 pb-12 text-sm text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">☕</span>
+            <span class="text-2xl font-heading font-black text-white">COFFEE HUB</span>
+          </div>
+          <p class="text-xs text-amber-400 font-bold uppercase tracking-wider">Good Coffee • Good Mood • Good Vibes</p>
+          <p class="text-xs text-stone-400 max-w-sm leading-relaxed">
+            Freshly prepared burgers, wraps, shakes, cold coffees, and the star Kulhar Pizza baked in traditional earthen clay pots. 100% Pure Vegetarian.
+          </p>
+          <div class="pt-2 text-xs">
+            <span class="text-stone-300 font-bold">Contact / Pre-Order:</span>
+            <a href="tel:9478015089" class="text-amber-400 font-black ml-1 hover:underline text-sm">9478015089</a>
+          </div>
+          <p class="text-xs font-bold text-orange-400 pt-1">
+            ⚠️ NOTICE: Only Dine-In & Takeaway. No delivery facility.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li><a href="menu.html" class="hover:text-amber-400">Full Menu & Prices</a></li>
+            <li><a href="combos.html" class="hover:text-amber-400">Combos & Specials</a></li>
+            <li><a href="blog.html" class="text-amber-400 font-bold">Food Journal (Blog)</a></li>
+            <li><a href="videos.html" class="hover:text-amber-400">Videos & Reels Section</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">Our Story & Ambience</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400">Location & Timings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Timings & Service</h4>
+          <p class="text-xs text-stone-300">Open Daily: 11:00 AM - 11:00 PM</p>
+          <p class="text-xs text-stone-400 mt-1">Service: Dine-In & Takeaway</p>
+          <p class="text-xs text-stone-400 mt-1">Specialty: ₹99 Kulhar Pizza in Sector 82 Mohali</p>
+          <a href="https://wa.me/919478015089" target="_blank" class="inline-flex items-center gap-2 mt-4 text-xs font-bold text-green-400 hover:underline">
+            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: 9478015089
+          </a>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-3">
+        <p>&copy; <span class="current-year">2026</span> COFFEE HUB. All Rights Reserved.</p>
+        <p class="text-stone-400">
+          Designed &amp; Developed by <span class="text-amber-400 font-semibold">Vikash</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/919478015089" target="_blank" class="whatsapp-fab w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center text-2xl" aria-label="WhatsApp Order">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

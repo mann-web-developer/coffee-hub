@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cold Coffee and Café Snacks: The Perfect Pair for Your Next Break | COFFEE HUB</title>
+  <meta name="description" content="Discover the best cold coffee and café snack combinations at Coffee Hub Mohali. Creamy cold coffee starting @ ₹69 paired with burgers, Kulhar Pizza, and combos near Amity University.">
+  <meta name="keywords" content="cold coffee near me, Kulhar Pizza in Sector 82 Mohali, best coffee places near me, iced coffee near me, cafes open near me, cheap coffee shops near me, burger and cold coffee combo Mohali">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cold Coffee and Café Snacks: The Perfect Pair for Your Next Break | Coffee Hub">
+  <meta property="og:description" content="Chilled, creamy cold coffee from ₹69 paired with sizzling Kulhar Pizza and burgers. Make your café break count in Sector 82A Mohali.">
+  <meta property="og:image" content="assets/images/blog-cold-coffee-snacks.png">
+  <meta property="og:type" content="article">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#120904] text-[#FFF8F0] font-sans antialiased selection:bg-amber-500 selection:text-black">
+
+  <!-- STICKY NAVIGATION BAR -->
+  <header id="main-header" class="sticky top-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center text-black font-heading font-extrabold text-2xl shadow-lg shadow-amber-500/30 group-hover:rotate-6 transition-transform">
+          ☕
+        </div>
+        <div>
+          <span class="text-xl font-heading font-black tracking-tight text-white group-hover:text-amber-400 transition-colors">
+            COFFEE HUB
+          </span>
+          <span class="text-[11px] block font-semibold text-amber-400 tracking-wider">GOOD COFFEE • GOOD MOOD</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-2 lg:gap-5">
+        <a href="index.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Home</a>
+        <a href="menu.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Full Menu</a>
+        <a href="combos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Combos</a>
+        <a href="blog.html" class="whitespace-nowrap px-3.5 py-2 rounded-xl text-sm font-black text-amber-400 bg-amber-500/10 border border-amber-500/30">Food Journal</a>
+        <a href="videos.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Videos</a>
+        <a href="about.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Our Story</a>
+        <a href="contact.html" class="whitespace-nowrap px-3 py-2 rounded-xl text-sm font-bold text-stone-300 hover:text-white hover:bg-white/5 transition-all">Contact</a>
+      </nav>
+
+      <!-- Right CTA -->
+      <div class="hidden sm:flex items-center">
+        <a href="menu.html" class="btn-gold px-5 py-2.5 rounded-xl text-sm font-bold flex items-center gap-2 whitespace-nowrap shadow-lg">
+          <span>Order Takeaway</span>
+          <i class="fa-solid fa-bag-shopping text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center gap-2 md:hidden">
+        <a href="tel:9478015089" class="p-2 text-amber-400" aria-label="Call Coffee Hub">
+          <i class="fa-solid fa-phone text-lg"></i>
+        </a>
+        <button id="mobile-menu-btn" class="p-2 text-stone-200 hover:text-white" aria-label="Open Navigation">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-[#120904]/98 backdrop-blur-2xl hidden flex-col justify-between p-6 md:hidden">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-stone-800">
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-lg bg-amber-500 flex items-center justify-center text-black font-bold">☕</div>
+          <span class="font-heading font-black text-white text-lg">COFFEE HUB</span>
+        </div>
+        <button id="mobile-menu-close" class="text-stone-400 hover:text-white p-2">
+          <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-3 mt-8">
+        <a href="index.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Home</a>
+        <a href="menu.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Full Menu</a>
+        <a href="combos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Combos</a>
+        <a href="blog.html" class="px-4 py-3 rounded-xl bg-amber-500/10 text-amber-400 font-bold border border-amber-500/30">Food Journal (Blogs)</a>
+        <a href="videos.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Videos</a>
+        <a href="about.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Our Story</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl text-stone-200 hover:bg-white/5 font-bold">Contact</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-stone-800">
+      <a href="https://wa.me/919478015089" target="_blank" class="w-full btn-gold py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>WhatsApp Takeaway: 9478015089</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- BREADCRUMBS -->
+  <div class="bg-stone-950/70 border-b border-stone-800/80 py-3">
+    <div class="max-w-4xl mx-auto px-4 flex items-center gap-2 text-xs text-stone-400">
+      <a href="index.html" class="hover:text-amber-400">Home</a>
+      <span>/</span>
+      <a href="blog.html" class="hover:text-amber-400">Food Journal</a>
+      <span>/</span>
+      <span class="text-amber-400 truncate">Cold Coffee and Café Snacks</span>
+    </div>
+  </div>
+
+  <!-- MAIN ARTICLE -->
+  <article class="py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <!-- Article Header -->
+      <header class="mb-8" data-aos="fade-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellow-500/20 text-yellow-400 border border-yellow-500/40 text-xs font-black uppercase tracking-wider mb-4">
+          ☕ Chilled Coffee & Snack Guide
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-white leading-tight mb-4">
+          Cold Coffee and Café Snacks: The Perfect Pair for Your Next Break
+        </h1>
+        <div class="flex flex-wrap items-center gap-4 text-xs text-stone-400 border-b border-stone-800 pb-6">
+          <span><i class="fa-regular fa-clock mr-1 text-amber-400"></i> 3 min read</span>
+          <span>•</span>
+          <span>By <strong>Coffee Hub Team</strong></span>
+          <span>•</span>
+          <span class="text-amber-400">Hub: <strong>Sector 82A IT City Road, Mohali</strong></span>
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      <div class="rounded-3xl overflow-hidden border-2 border-yellow-500/30 shadow-2xl mb-10 bg-black" data-aos="zoom-in">
+        <img src="assets/images/blog-cold-coffee-snacks.png" alt="Cold Coffee and Cafe Snacks Coffee Hub" class="w-full h-auto object-cover">
+      </div>
+
+      <!-- Article Content -->
+      <div class="prose prose-invert max-w-none text-stone-300 text-base sm:text-lg leading-relaxed space-y-6" data-aos="fade-up">
+        
+        <p class="text-xl text-stone-200 font-medium leading-relaxed">
+          There is something genuinely satisfying about taking a break, enjoying a chilled drink, and having a delicious snack on the side.
+        </p>
+
+        <p>
+          Whether you are catching up with friends, taking a break from work or college, or simply stepping out to satisfy sudden cravings, cold coffee and café snacks make one of the most universally loved combinations.
+        </p>
+        <p>
+          At <strong>Coffee Hub</strong>, located right outside Amity University Gate-2 on IT City Road, you can explore refreshing chilled beverages alongside hot vegetarian snacks for a relaxed and flavorful outing.
+        </p>
+
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-white pt-4 border-t border-stone-800/80">
+          Why Is Cold Coffee a Café Favourite?
+        </h2>
+        <p>
+          Cold coffee is a perennial favourite for people who appreciate the rich roast of coffee in a chilled, velvety, refreshing form.
+        </p>
+        <p>
+          Its thick creamy texture, subtle sweetness, and familiar coffee aroma make it an easy beverage to savor on its own or alongside savoury bites.
+        </p>
+        <p>
+          You can enjoy cold coffee during casual evening strolls, while catching up with classmates, or whenever you need an energizing boost from your daily routine.
+        </p>
+
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-white pt-4">
+          What Goes Well with Cold Coffee?
+        </h2>
+        <p>
+          Choosing the right snack elevates your café trip from ordinary to unforgettable. Here are three popular combinations to consider at Coffee Hub:
+        </p>
+
+        <div class="space-y-4 my-6">
+          <div class="glass-panel p-6 rounded-2xl border border-stone-800 hover:border-amber-500/50 transition-all">
+            <h3 class="text-lg font-bold text-amber-400 mb-2">1. Cold Coffee and a Burger</h3>
+            <p class="text-sm text-stone-300">
+              A freshly toasted burger paired with a thick chilled coffee makes a convenient combination when you want something hearty and filling without planning a sit-down restaurant meal. Try our Paneer Burger or Double Tikki Burger for the best crunch.
+            </p>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl border border-stone-800 hover:border-amber-500/50 transition-all">
+            <h3 class="text-lg font-bold text-orange-400 mb-2">2. Cold Coffee and Kulhar Pizza</h3>
+            <p class="text-sm text-stone-300">
+              If you enjoy novel food experiences, pair your chilled drink with our famous <strong>Kulhar Pizza in Sector 82 Mohali (@ ₹99)</strong>. The contrast between piping hot, molten cheese in an earthen pot and icy cold coffee is simply unmatched!
+            </p>
+          </div>
+
+          <div class="glass-panel p-6 rounded-2xl border border-stone-800 hover:border-amber-500/50 transition-all">
+            <h3 class="text-lg font-bold text-yellow-400 mb-2">3. Cold Coffee and a Food Combo</h3>
+            <p class="text-sm text-stone-300">
+              Look for our money-saver café combos starting from ₹129! Whether it's the Paneer Burger + Cold Coffee Combo or the Special Wrap Combo, you get maximum satisfaction at pocket-friendly pricing.
+            </p>
+          </div>
+        </div>
+
+        <p class="text-stone-300">
+          The best pairing ultimately depends on your appetite and personal taste!
+        </p>
+
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-white pt-4 border-t border-stone-800/80">
+          Affordable Café Breaks at Coffee Hub (Starting @ ₹69)
+        </h2>
+        <p>
+          A great café outing does not require a special occasion. Sometimes, a short 15-minute break and a favorite drink are enough to refresh your entire day.
+        </p>
+        <p>
+          Coffee Hub offers <strong>Classic Cold Coffee from ₹69/-</strong>, along with Hazelnut Cold Coffee (₹89), Frappuccinos, thick shakes, and pure vegetarian snacks. You can explore our complete menu and pick a combination tailored to your mood and budget.
+        </p>
+        <p class="text-xs text-stone-400 italic">
+          *Prices and availability may change, so feel free to check the current digital menu before ordering.
+        </p>
+
+        <!-- WHERE TO VISIT SECTION -->
+        <div class="glass-panel rounded-3xl p-8 border-2 border-yellow-500/40 my-8 shadow-xl bg-gradient-to-r from-stone-900 to-[#1c0f05]">
+          <h3 class="text-2xl font-heading font-black text-white mb-3">
+            Make Your Next Coffee Break Count
+          </h3>
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed mb-4">
+            Looking for chilled cold coffee or the trending <strong>Kulhar Pizza in Sector 82 Mohali</strong>? Explore <strong>Coffee Hub, Near Gate-2 Amity University Punjab, Sector 82A IT City Road</strong>.
+          </p>
+          <p class="text-stone-300 text-sm mb-6">
+            Bring a friend, try a new snack, or take a peaceful moment to enjoy your favourite brew. Coffee, snacks, and good vibes — make your next break a little more enjoyable.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="https://wa.me/919478015089?text=Hi%20Coffee%20Hub,%20I%20want%20to%20order%20Cold%20Coffee%20and%20Snacks" target="_blank" class="btn-gold px-6 py-3 rounded-xl text-xs sm:text-sm font-black flex items-center gap-2">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>WhatsApp Pre-Order (9478015089)</span>
+            </a>
+            <a href="combos.html" class="px-5 py-3 rounded-xl bg-stone-900 border border-stone-700 hover:border-amber-400 text-white font-bold text-xs sm:text-sm transition-all flex items-center gap-2">
+              <span>Explore Combos from ₹129</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation to Other Articles -->
+      <div class="mt-12 pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <a href="blog-affordable-cafe-food-mohalli.html" class="text-xs text-amber-400 hover:underline flex items-center gap-2">
+          &larr; Previous: Affordable Café Food in Mohali
+        </a>
+        <a href="blog.html" class="text-xs text-stone-300 hover:text-amber-400 flex items-center gap-2">
+          <span>Back to Food Journal</span> &rarr;
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-stone-800 bg-[#0A0502] pt-14 pb-12 text-sm text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+        <div class="md:col-span-2 space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">☕</span>
+            <span class="text-2xl font-heading font-black text-white">COFFEE HUB</span>
+          </div>
+          <p class="text-xs text-amber-400 font-bold uppercase tracking-wider">Good Coffee • Good Mood • Good Vibes</p>
+          <p class="text-xs text-stone-400 max-w-sm leading-relaxed">
+            Freshly prepared burgers, wraps, shakes, cold coffees, and the star Kulhar Pizza baked in traditional earthen clay pots. 100% Pure Vegetarian.
+          </p>
+          <div class="pt-2 text-xs">
+            <span class="text-stone-300 font-bold">Contact / Pre-Order:</span>
+            <a href="tel:9478015089" class="text-amber-400 font-black ml-1 hover:underline text-sm">9478015089</a>
+          </div>
+          <p class="text-xs font-bold text-orange-400 pt-1">
+            ⚠️ NOTICE: Only Dine-In & Takeaway. No delivery facility.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Quick Navigation</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+            <li><a href="menu.html" class="hover:text-amber-400">Full Menu & Prices</a></li>
+            <li><a href="combos.html" class="hover:text-amber-400">Combos & Specials</a></li>
+            <li><a href="blog.html" class="text-amber-400 font-bold">Food Journal (Blog)</a></li>
+            <li><a href="videos.html" class="hover:text-amber-400">Videos & Reels Section</a></li>
+            <li><a href="about.html" class="hover:text-amber-400">Our Story & Ambience</a></li>
+            <li><a href="contact.html" class="hover:text-amber-400">Location & Timings</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Timings & Service</h4>
+          <p class="text-xs text-stone-300">Open Daily: 11:00 AM - 11:00 PM</p>
+          <p class="text-xs text-stone-400 mt-1">Service: Dine-In & Takeaway</p>
+          <p class="text-xs text-stone-400 mt-1">Specialty: ₹99 Kulhar Pizza in Sector 82 Mohali</p>
+          <a href="https://wa.me/919478015089" target="_blank" class="inline-flex items-center gap-2 mt-4 text-xs font-bold text-green-400 hover:underline">
+            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp: 9478015089
+          </a>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-3">
+        <p>&copy; <span class="current-year">2026</span> COFFEE HUB. All Rights Reserved.</p>
+        <p class="text-stone-400">
+          Designed &amp; Developed by <span class="text-amber-400 font-semibold">Vikash</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/919478015089" target="_blank" class="whatsapp-fab w-14 h-14 rounded-full bg-green-500 text-white flex items-center justify-center text-2xl" aria-label="WhatsApp Order">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ once: true, duration: 800 });</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
